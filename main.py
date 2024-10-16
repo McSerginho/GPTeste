@@ -2,10 +2,10 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/test")
-async def read_test():
-    return {"message": "Deu certo, ufa kkk"}
+@app.get("/")
+async def read_root():
+    return {"message": "API funcionando!"}
 
-# Para executar o servidor
-# No terminal, use o seguinte comando:
-# uvicorn main:app --reload
+@app.get("/teste")
+async def read_teste():
+    return {"message": "Deu certo, ufa kkk"}
